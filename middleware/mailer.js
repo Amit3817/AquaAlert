@@ -2,7 +2,7 @@ const User = require("../model/user.js");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
-const client = require('twilio')(process.env.accountSid,process.env.authToken);
+// const client = require('twilio')(process.env.accountSid,process.env.authToken);
 
 const sent = async (req, res, next) => {
   try {
@@ -17,14 +17,14 @@ const sent = async (req, res, next) => {
     });
 
 
-  const customMessage = `Here is your four digit OTP for login ${otp} . Do not share it with anyone, if this is not you contact support.`;
-     client.messages.create({
-    body: customMessage,
-    from: process.env.twilioNo, // Your Twilio phone number
-    to: '+919565549492'
-})
-.then(message => console.log(message.sid))
-.catch(error => console.error(error));
+//   const customMessage = `Here is your four digit OTP for login ${otp} . Do not share it with anyone, if this is not you contact support.`;
+//      client.messages.create({
+//     body: customMessage,
+//     from: process.env.twilioNo, // Your Twilio phone number
+//     to: '+919565549492'
+// })
+// .then(message => console.log(message.sid))
+// .catch(error => console.error(error));
 
     // const image=require('')
 

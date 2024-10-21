@@ -30,5 +30,5 @@ const verifytoken = async (req, res, next) => {
 };
 
 module.exports = {
-  verifytoken,
+  verifytoken
 };

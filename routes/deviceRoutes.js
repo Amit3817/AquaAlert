@@ -103,35 +103,35 @@ router.post("/create",[
       tokenverify.verifytoken,
       deviceController.create);
 
-router.post(
-  "/hardware",
-  [
-    body("deviceId")
-      .notEmpty()
-      .withMessage("Device ID is required")
-      .isMongoId()
-      .withMessage("Device ID must be a valid MongoDB ObjectId"),
+// router.post(
+//   "/hardware",
+//   [
+//     body("deviceId")
+//       .notEmpty()
+//       .withMessage("Device ID is required")
+//       .isMongoId()
+//       .withMessage("Device ID must be a valid MongoDB ObjectId"),
 
-    body("rate")
-      .notEmpty()
-      .withMessage("Rate is required")
-      .isNumeric()
-      .withMessage("Rate must be a number"),
+//     body("rate")
+//       .notEmpty()
+//       .withMessage("Rate is required")
+//       .isNumeric()
+//       .withMessage("Rate must be a number"),
 
-    body("pressure")
-      .notEmpty()
-      .withMessage("Pressure is required")
-      .isNumeric()
-      .withMessage("Pressure must be a number"),
+//     body("pressure")
+//       .notEmpty()
+//       .withMessage("Pressure is required")
+//       .isNumeric()
+//       .withMessage("Pressure must be a number"),
 
-    body("time")
-      .notEmpty()
-      .withMessage("Time is required")
-      .isISO8601()
-      .withMessage("Time must be a valid ISO 8601 date string"),
-  ],validation,
-  tokenverify.verifytoken,
-  deviceController.hardware
-);
+//     body("time")
+//       .notEmpty()
+//       .withMessage("Time is required")
+//       .isISO8601()
+//       .withMessage("Time must be a valid ISO 8601 date string"),
+//   ],validation,
+//   tokenverify.verifytoken,
+//   deviceController.hardware
+// );
 
 module.exports = router;

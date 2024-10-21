@@ -96,6 +96,5 @@ module.exports = {
   create,
   getAll,
   getOne,
-  hardware,
   remove
 };
